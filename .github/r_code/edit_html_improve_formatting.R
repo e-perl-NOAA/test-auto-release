@@ -7,7 +7,6 @@
 # html_txt <- readLines(user_manual_name)
 # # html_txt <- readLines("SS330_User_Manual_release.html")
 
-setwd("../..")
 html_txt <- readLines("SS330_User_Manual.html")
 # read html snippits to add
 html_snips <- readLines("html_usermanual_snippets.html")
