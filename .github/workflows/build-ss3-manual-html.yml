@@ -1,7 +1,7 @@
 name: build html version of the ss3 user manual
 
 on:
-  push:
+  # push:
     # paths: 
     #   - '**.tex'
     #   - 'html_usermanual_snippets.html'
