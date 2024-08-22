@@ -2,7 +2,7 @@ name: Build SS3 user manual using texlive
 
 on:
   workflow_dispatch:
-  push:
+  # push:
     # paths:
     #   - '**.tex'
     #   - '**.yml'

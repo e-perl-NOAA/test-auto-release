@@ -2,10 +2,10 @@ name: build html version of the ss3 user manual
 
 on:
   push:
-    paths: 
-      - '**.tex'
-      - 'html_usermanual_snippets.html'
-      - '**.yml'
+    # paths: 
+    #   - '**.tex'
+    #   - 'html_usermanual_snippets.html'
+    #   - '**.yml'
   pull_request:
     paths:
       - '**.tex'

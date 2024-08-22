@@ -1,8 +1,8 @@
 name: add artifact links to pull request and related issues
 on:
-  workflow_run:
-    workflows: [build html version of the ss3 user manual, Build SS3 user manual using texlive]
-    types: [completed]
+  # workflow_run:
+  #   workflows: [build html version of the ss3 user manual, Build SS3 user manual using texlive]
+  #   types: [completed]
   workflow_dispatch:
 
 jobs:
