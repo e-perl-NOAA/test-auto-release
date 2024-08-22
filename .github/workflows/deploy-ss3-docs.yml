@@ -35,11 +35,11 @@ jobs:
         run: install.packages("rmarkdown")
         shell: Rscript {0}
 
-      - name: render the rmd files
-        run: |
-          rmarkdown::render("User_Guides/ss3_model_tips/ss3_model_tips.Rmd", output_format = c("html_document", "pdf_document"), output_dir = "docs")
-          rmarkdown::render("User_Guides/getting_started/Getting_Started_SS3.Rmd", output_format = c("html_document", "pdf_document"), output_dir = "docs")
-        shell: Rscript {0}
+      # - name: render the rmd files
+      #   run: |
+      #     rmarkdown::render("User_Guides/ss3_model_tips/ss3_model_tips.Rmd", output_format = c("html_document", "pdf_document"), output_dir = "docs")
+      #     rmarkdown::render("User_Guides/getting_started/Getting_Started_SS3.Rmd", output_format = c("html_document", "pdf_document"), output_dir = "docs")
+      #   shell: Rscript {0}
 
       - name: Deploy to GitHub pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
