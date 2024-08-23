@@ -68,11 +68,11 @@ jobs:
           writeLines(text = manual_tex, con = "SS330_User_Manual.tex")
         shell: Rscript {0}
       
-      - name: Commit date and version changes in SS330_User_Manual.tex
-        uses: EndBug/add-and-commit@v9
-        with: 
-          add: './SS330_User_Manual.tex'
-          message: 'release: update version and date in manual'    
+      # - name: Commit date and version changes in SS330_User_Manual.tex
+      #   uses: EndBug/add-and-commit@v9
+      #   with: 
+      #     add: './SS330_User_Manual.tex'
+      #     message: 'release: update version and date in manual'    
       
 
 # HTML Portion
@@ -86,10 +86,11 @@ jobs:
           file.remove("SS330_User_Manual.html")
         shell: Rscript {0}   
 
-      - name: Commit changes made to html in docs folder to repo
+# Commit pdf and html changes
+      - name: Commit changes of tex file version and html in docs folder to repo
         uses: EndBug/add-and-commit@v9
         with: 
-          message: 'update html in docs'
+          message: 'update tex file version and html in docs'
 
 # PDF Portion
       - name: Compile LaTeX document
