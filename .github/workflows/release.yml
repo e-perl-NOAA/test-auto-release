@@ -53,6 +53,7 @@ jobs:
       - name: Update version and date in manual
         run: |
           version <- readLines("version.txt", encoding = "UTF-8")
+          version <- gsub("v", "", version)
           manual_tex <- readLines("SS330_User_Manual.tex")
           manual_tex[grep("Version", manual_tex)] <- gsub(
             pattern = "[0-9].[0-9][0-9].[0-9][0-9]",
