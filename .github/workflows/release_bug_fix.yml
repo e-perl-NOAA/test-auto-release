@@ -36,7 +36,7 @@ jobs:
         run: install.packages("rmarkdown")
         shell: Rscript {0}
 
-# Get previous version and then create the next version   
+# Get previous tag version and then create the next version   
       - name: Application Version Bug Fix
         id: version
         run: |
