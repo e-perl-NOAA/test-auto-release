@@ -71,8 +71,9 @@ jobs:
           version <- readLines("version.txt", encoding = "UTF-8")
           version <- gsub("v", "", version)
           manual_tex <- readLines("SS330_User_Manual.tex")
+          vers_vec <- paste0(c("[0-9].[0-9][0-9].[0-9][0-9]","[0-9].[0-9][0-9].[0-9][0-9].[0-9]"), collapse = "|")
           manual_tex[grep("Version", manual_tex)] <- gsub(
-            pattern = "[0-9].[0-9][0-9].[0-9][0-9]",
+            pattern = vers_vec,
             replacement = version,
             x = manual_tex[grep(pattern = "Version", x = manual_tex)]
           )
