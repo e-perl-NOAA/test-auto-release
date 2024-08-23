@@ -49,7 +49,7 @@ jobs:
             then
               increment=$((increment + 1))
             else 
-              increment=0
+              increment=1
           fi
           # Construct new version string
           new_version="${major}.${minor}.${patch}.$increment"
