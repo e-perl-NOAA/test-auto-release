@@ -69,6 +69,7 @@ jobs:
       - name: Update version and date in manual
         run: |
           version <- readLines("version.txt", encoding = "UTF-8")
+          version <- gsub("v", "", version)
           manual_tex <- readLines("SS330_User_Manual.tex")
           manual_tex[grep("Version", manual_tex)] <- gsub(
             pattern = "[0-9].[0-9][0-9].[0-9][0-9]",
@@ -117,7 +118,7 @@ jobs:
           release_name: ${{ steps.version.outputs.version }} Docs
           draft: false
           prerelease: false
-          body: SS3 User Manual, for the ${{ steps.version.outputs.version }} Stock Synthesis release.
+          body: SS3 User Manual for the ${{ steps.version.outputs.version }} Stock Synthesis release.
 
 # Add pdf as artifact for release     
       - name: Upload release artifact - pdf manual

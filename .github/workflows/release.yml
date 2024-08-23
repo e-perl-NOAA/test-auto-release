@@ -102,7 +102,7 @@ jobs:
           release_name: ${{ steps.version.outputs.version }} Docs
           draft: false
           prerelease: false
-          body: SS3 User Manual, for the ${{ steps.version.outputs.version }} Stock Synthesis release.
+          body: SS3 User Manual for the ${{ steps.version.outputs.version }} Stock Synthesis release.
 
  # Add pdf as artifact for release     
       - name: Upload release artifact - pdf manual
